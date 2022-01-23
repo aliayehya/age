@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>base</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<h2>Age Estimation Web App</h2>
+
+    <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
+      <input class="form-control" type="file" name="imagefile" > 
+      <input class="btn btn-primary mt-3"type="submit" value="Predict Image"> 
+    </form>
+    {% if prediction %} 
+	      <p class="text-center"> age is   {{prediction}} years</p>
+    {% endif %}
+    
+    <img src="{{ user_image }}" alt="User Image">
+
+</body>
+</html>
