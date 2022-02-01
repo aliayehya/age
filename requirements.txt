@@ -1,0 +1,7 @@
+albumentations
+numpy
+dlib
+Flask
+tensorflow
+matplotlib
+opencv-python
